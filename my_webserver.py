@@ -6,6 +6,6 @@ class my_web_server:
 
 
     def run(self, host='localhost', port=3001):
-        httpd = http_server.HTTPServer(host, port), self.http_handler)
+        httpd = http_server.HTTPServer((host, port), self.http_handler)
         print(f"Servidor Web rodando em {host}:{port}.")
         httpd.serve_forever()
